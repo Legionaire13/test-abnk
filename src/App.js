@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import CardList from "./components/CardList/CardList"
+import FavoritesFilter from "./components/FavoritesFilter/FavoritesFilter"
+
+import "./App.css"
+import mock from "./mock.json"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <article className="App">
+      <h1 className="headline">Список карточек:</h1>
+
+      <FavoritesFilter />
+      <CardList cards={mock} />
+    </article>
+  )
 }
 
-export default App;
+export default App
