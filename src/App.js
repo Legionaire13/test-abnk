@@ -1,17 +1,20 @@
 import CardList from "./components/CardList/CardList"
 import FavoritesFilter from "./components/FavoritesFilter/FavoritesFilter"
+import { Provider } from "react-redux"
+import store from "./store"
 
 import "./App.css"
-import mock from "./mock.json"
 
 function App() {
   return (
-    <article className="App">
-      <h1 className="headline">Список карточек:</h1>
+    <Provider store={store}>
+      <article className="App">
+        <h1 className="headline">Список карточек:</h1>
 
-      <FavoritesFilter />
-      <CardList cards={mock} />
-    </article>
+        <FavoritesFilter />
+        <CardList />
+      </article>
+    </Provider>
   )
 }
 

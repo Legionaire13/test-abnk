@@ -1,14 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import "./Button.css"
 
-const Button = ({ type }) => {
-  const [isActive, setIsActive] = useState(false)
-  const onClick = () => setIsActive(!isActive)
+const Button = ({ type, onLike, onDelete, onFilter, isActive }) => {
   // eslint-disable-next-line default-case
   switch (type) {
     case "filter":
       return (
-        <button className="button button--filter" onClick={onClick}>
+        <button className="button button--filter" onClick={onFilter}>
           <svg
             className="button__img"
             xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +19,7 @@ const Button = ({ type }) => {
       )
     case "delete":
       return (
-        <button className="button button--delete">
+        <button className="button button--delete" onClick={onDelete}>
           <svg
             className="button__img"
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +34,7 @@ const Button = ({ type }) => {
     case "like":
     default:
       return (
-        <button className="button button--like" onClick={onClick}>
+        <button className="button button--like" onClick={onLike}>
           <svg
             className="button__img"
             xmlns="http://www.w3.org/2000/svg"

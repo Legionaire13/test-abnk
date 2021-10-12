@@ -36,6 +36,10 @@
     ]
   },
   "devDependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   }
 }
