@@ -46,4 +46,23 @@
   .button:hover {
     cursor: pointer;
   }
+
+  .button:focus {
+    outline: none;
+  }
+
+  .button:focus path {
+    stroke: #ff0000;
+    stroke-width: 2.5;
+
+    transition: stroke-width 0.3s;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .button--delete {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
 }
