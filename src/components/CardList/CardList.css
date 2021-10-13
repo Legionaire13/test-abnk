@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 426px) {
   .card-list {
     width: 420px;
   }

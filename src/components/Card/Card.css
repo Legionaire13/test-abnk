@@ -1,6 +1,5 @@
 .card {
-  min-width: 100px;
-  max-width: 150px;
+  width: 150px;
   min-height: 200px;
 
   padding: 15px;
@@ -10,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
 
   box-shadow: 0 0 20px -7px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -43,10 +41,9 @@
 
 @media screen and (max-width: 425px) {
   .card {
-    width: 100px;
+    width: 110px;
 
     margin: 10px;
-
     padding: 10px;
   }
 
