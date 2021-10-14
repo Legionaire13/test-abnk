@@ -58,6 +58,10 @@ Card.propTypes = {
   addCardToFavorites: PropTypes.func.isRequired,
   removeCardFromFavorites: PropTypes.func.isRequired,
   deleteCard: PropTypes.func.isRequired,
+  login: PropTypes.string,
+  id: PropTypes.number,
+  avatar_url: PropTypes.string,
+  favorites: PropTypes.array,
 }
 
 const mapStateToProps = (state) => ({

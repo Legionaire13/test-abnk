@@ -1,5 +1,6 @@
 import React from "react"
 import "./Button.css"
+import PropTypes from "prop-types"
 
 const Button = ({ type, onLike, onDelete, onFilter, isActive }) => {
   // eslint-disable-next-line default-case
@@ -48,3 +49,11 @@ const Button = ({ type, onLike, onDelete, onFilter, isActive }) => {
 }
 
 export default Button
+
+Button.propTypes = {
+  type: PropTypes.string,
+  onLike: PropTypes.func,
+  onDelete: PropTypes.func,
+  onFilter: PropTypes.func,
+  isActive: PropTypes.bool,
+}

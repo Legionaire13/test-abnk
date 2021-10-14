@@ -23,7 +23,6 @@ const CardList = ({
       <ul className="card-list">
         {cards !== null &&
           filteredCards.map((item) => {
-            console.log(item, favorites)
             return <Card key={item.id} item={item} />
           })}
       </ul>
@@ -41,6 +40,9 @@ const CardList = ({
 CardList.propTypes = {
   cardList: PropTypes.object.isRequired,
   getCards: PropTypes.func.isRequired,
+  cards: PropTypes.array,
+  favorites: PropTypes.array,
+  isFilteredByFavorites: PropTypes.bool,
 }
 
 const mapStateToProps = (state) => ({
